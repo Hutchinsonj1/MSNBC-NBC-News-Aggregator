@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+    <title>News Aggregator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<style>  
+    .jumbotron {
+        background-color: black;
+        border: 5px solid darkblue;
+        border-bottom: 10px solid darkblue;
+        color: white;
+    }
+    .jumbotron a:visited {
+        background-color: #d60404;
+        color: white;
+        border: 2px solid white;
+    }
+    .jumbotron a:hover {
+        background-color: whitesmoke;
+        color: #d60404;
+        border: 2px solid #d60404;
+    }
+    body {
+        background-color: slategrey;
+        border: 5px solid darkblue;
+    }
+    .container {
+        background-color: whitesmoke;
+        border: 3px solid #d60404;
+        color: black;
+        padding: 30px;
+    }
+    .NEWS_LINK a:link, a:visited {
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color:darkblue;
+        color:white;
+        border: 2px solid white;
+        border-radius: 7px;
+        padding: 15px 50px;
+        text-align:center;
+        text-decoration: none;
+        display: inline-block;
+    }        
+    .NEWS_LINK a:hover, a:active {
+        background-color: #d60404;
+        color: white;
+        border: 2px solid white;
+        border-radius: 7px;
+    }
+</style>
+    <div class="jumbotron">
+        <center><h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 50px;">News Aggregator</h1>
+            <br>
+           <a href="/" class="btn btn-danger"><b>Refresh News</b></a>
+        </form>
+    </center>  
+    </div>
+    <div class="NEWS_LINK" style="text-align: center;">
+        <a href="https://www.politico.com/news/msnbc"
+        target="_blank"><b>MSNBC</b></a>
+        <a style="padding: 15px 55px;" href="https://www.nbcnews.com/us-news"
+        target="_blank"><b>NBC</b></a>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                    <h3 style="color: #d60404;" class="text-centre"><u><b>MSNBC News</b></u></h3>
+                    <hr>
+                    {% for m in msnbc_news %}
+                    <h5> -  {{m}} </h5>
+                    <hr>
+                    {% endfor %}
+                    <hr>
+                    {% for m in msnbc_news2 %}
+                    <h5> - {{m}}</h5>
+                    <hr>
+                    {% endfor %}
+                    <hr>
+                    {% for x in msnbc_news3 %}
+                    <h5> - {{x}}</h5>
+                    <hr>
+                    {% endfor %}
+                    <hr>
+                    {% for y in msnbc_news4 %}
+                    <h5> - {{y}}</h5>
+                    <hr>
+                    {% endfor %}
+                    <hr>
+                    {% for z in msnbc_news5 %}
+                    <h5> - {{z}}</h5>
+                    <hr>
+                    {% endfor %}
+                    <hr>
+                    {% for a in msnbc_news6 %}
+                    <h5> - {{a}}</h5>
+                    <hr>
+                    {% endfor %}
+                    <br>
+            </div>
+            <div class="col-6">
+                    <h3 style="color: #d60404;" class="text-centre"><u><b>NBC News</b></u></h3>
+                    <hr>
+                    {% for nn in nbc_news %}
+                    <h5> - {{nn}} </h5>
+                    <hr>
+                    {% endfor %}
+                    <hr>
+                    <hr>
+                    {% for nn2 in nbc_news2 %}
+                    <h5> - {{nn2}} </h5>
+                    <hr>
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+</body>
+</html>
